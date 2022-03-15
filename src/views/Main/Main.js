@@ -10,11 +10,13 @@ export default function Main() {
     const fetchData = async () => {
       const resp = await getBlogs();
       setBlogs(resp);
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 3000);
     };
     fetchData();
   }, []);
-  if (loading) return <span className="loader"></span>;
+  if (loading) return <div className="loader">Loading</div>;
   return (
     <>
       <div className="main">

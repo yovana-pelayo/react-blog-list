@@ -12,7 +12,7 @@ export default function Main() {
       setBlogs(resp);
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 750);
     };
     fetchData();
   }, []);
